@@ -4,8 +4,8 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Calendar'
-  ClientHeight = 252
-  ClientWidth = 271
+  ClientHeight = 271
+  ClientWidth = 267
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,16 +19,30 @@ object Form1: TForm1
   object lbl1: TLabel
     Left = 8
     Top = 224
-    Width = 251
+    Width = 105
     Height = 13
-    Caption = 'Today'
+    Caption = 'Selected date is today'
+  end
+  object lbl2: TLabel
+    Left = 96
+    Top = 248
+    Width = 57
+    Height = 13
+    Caption = '00:00:00'
+  end
+  object lbl3: TLabel
+    Left = 8
+    Top = 248
+    Width = 82
+    Height = 13
+    Caption = 'Chronometer:'
   end
   object cal1: TMonthCalendar
     Left = 8
     Top = 8
     Width = 251
     Height = 183
-    Date = 45280.092180219910000000
+    Date = 45280.554234131950000000
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -52,9 +66,24 @@ object Form1: TForm1
     TabOrder = 1
     OnChange = DateTimePicker1Change
   end
+  object btn1: TButton
+    Left = 208
+    Top = 240
+    Width = 51
+    Height = 21
+    Caption = 'Start'
+    TabOrder = 2
+    OnClick = btn1Click
+  end
   object tmr1: TTimer
     OnTimer = tmr1Timer
-    Left = 144
-    Top = 120
+    Left = 224
+    Top = 112
+  end
+  object tmr2: TTimer
+    Enabled = False
+    OnTimer = tmr2Timer
+    Left = 224
+    Top = 152
   end
 end
